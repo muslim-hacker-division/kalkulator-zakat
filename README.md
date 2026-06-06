@@ -6,3 +6,5 @@ Aplikasi GUI modern berbasis Go dan Fyne untuk menghitung zakat mal, edukasi zak
 - 📱 Tampilan responsif (Bisa digeser/scroll)
 - 🕋 Tab Khusus Zakat Mal, Zakat Fitrah, & Sedekah
 - 📜 Dilengkapi dalil Al-Qur'an dan Hadits
+
+VERSI APLIKASI NYA BELUM TERSEDIA !!
