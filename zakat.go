@@ -16,7 +16,6 @@ func main() {
 	myApp.Settings().SetTheme(theme.DarkTheme())
 	
 	myWindow := myApp.NewWindow("Zakat Hub - Responsif")
-	// Kita set ukuran awal, tapi sekarang jendelanya BISA diperkecil sesuka hati
 	myWindow.Resize(fyne.NewSize(360, 500))
 
 	// ==========================================
@@ -28,7 +27,7 @@ func main() {
 	inputHarta.SetPlaceHolder("Contoh: 120000000")
 
 	labelHasil := widget.NewRichTextFromMarkdown("")
-	labelHasil.Wrapping = fyne.TextWrapWord // TRIK 1: Hasil kalkulasi otomatis melipat ke bawah jika layar sempit
+	labelHasil.Wrapping = fyne.TextWrapWord 
 
 	tombolHitung := widget.NewButton("Hitung Zakat Sekarang", func() {
 		hartaStr := inputHarta.Text
@@ -59,9 +58,8 @@ func main() {
 			"> *\"Ambil-lah zakat dari sebagian harta mereka...\"* (QS. At-Taubah: 103)\n\n" +
 			"**Syarat:** Halal, milik penuh, mencapai nishab, & haul 1 tahun.",
 	)
-	dalilMal.Wrapping = fyne.TextWrapWord // TRIK 2: Teks dalil otomatis melipat ke bawah
+	dalilMal.Wrapping = fyne.TextWrapWord 
 
-	// Bungkus konten dalam VBox biasa
 	boxMal := container.NewVBox(
 		labelJudulMal,
 		widget.NewSeparator(),
@@ -73,7 +71,6 @@ func main() {
 		dalilMal,
 	)
 	
-	// TRIK MAINAN: Masukkan ke dalam Scroll Container agar jika layar diperkecil, dia bisa di-scroll ke bawah ala HP!
 	kontenZakatMal := container.NewScroll(boxMal)
 
 	// ==========================================
